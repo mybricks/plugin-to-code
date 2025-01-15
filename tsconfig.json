@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": ["DOM", "ES2017"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": "./"
+  }
+}
