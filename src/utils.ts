@@ -65,7 +65,7 @@ export const toCode = async (toJSON: any) => {
     // 当前出码支持：单场景、排版布局、普通插槽、组件事件卡片（不包含fx、变量）
     // 组件库依赖：react@18 react-dom@18 antd@4 moment@2 @ant-design/icons@4
     // 请先执行以下命令以安装组件库npm包
-    // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.0
+    // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.1
     ${tsx}`, {
       parser: 'babel-ts',
       semi: true,
