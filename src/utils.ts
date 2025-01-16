@@ -33,8 +33,8 @@ export const generateComponentNameByDef = ({ namespace, rtType }: any) => {
     }, "");
 };
 
-export const getNamespaceToNpm = () => {
-  const namespaceToNpm: any = {};
+export const getNamespaceToNpmMap = () => {
+  const namespaceToNpmMap: any = {};
 
   (window as any).__comlibs_edit_.forEach(({ id, namespace, comAray }: any) => {
     if (id && namespace) {
@@ -47,44 +47,26 @@ export const getNamespaceToNpm = () => {
       if (Array.isArray(com.comAray)) {
         traverseComAry(com.comAray, npm);
       } else {
-        namespaceToNpm[com.namespace] = npm;
+        namespaceToNpmMap[com.namespace] = npm;
       }
     });
   }
 
-  return namespaceToNpm;
+  return namespaceToNpmMap;
 }
 
 export const toCode = async (toJSON: any) => {
-  const tsx = toReactCode(toJSON);
-  // TODO: 后面应用传入信息
-  const namespaceToNpm: any = getNamespaceToNpm();
-  const dependencyImport: any = {};
-  const deps = toJSON.scenes[0].deps;
-
-  deps.forEach(({ namespace, rtType }: any) => {
-    const npm = namespaceToNpm[namespace]
-
-    if (!dependencyImport[npm]) {
-      dependencyImport[npm] = new Set();
-    }
-
-    dependencyImport[npm].add(generateComponentNameByDef({ namespace, rtType }));
-  })
-
-  const dependencyImportCode = Object.entries(dependencyImport).reduce((pre, cur: any) => {
-    const [npm, dependency] = cur;
-    return pre + `import { ${Array.from(dependency).join(", ")} } from "${npm}";\n`
-  }, "")
+  const namespaceToNpmMap: any = getNamespaceToNpmMap();
+  const tsx = toReactCode(toJSON, {
+    namespaceToNpmMap
+  });
 
   return await prettier.format(`
     // 当前出码支持：单场景、排版布局、普通插槽、组件事件卡片（不包含fx、变量）
     // 组件库依赖：react@18 react-dom@18 antd@4 moment@2 @ant-design/icons@4
     // 请先执行以下命令以安装组件库npm包
-    // npm i @mybricks/comlib-basic@0.0.7-next.2 @mybricks/comlib-pc-normal@0.0.22-next.5 
-    import React, { useRef } from "react";\n`
-    + `${dependencyImportCode}\n`
-    + `export default function () {${tsx}}`, {
+    // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc0.0.1-next.0
+    ${tsx}`, {
       parser: 'babel-ts',
       semi: true,
       singleQuote: true,

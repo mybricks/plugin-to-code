@@ -1,6 +1,6 @@
 {
   "name": "@mybricks/plugin-tocode",
-  "version": "0.0.1-next.0",
+  "version": "0.0.1-next.1",
   "description": "",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.26.0",
-    "@mybricks/to-code-react": "0.0.5-next.0",
+    "@mybricks/to-code-react": "0.0.5-next.2",
     "prettier": "^3.4.2",
     "react": "^18.3.1"
   }
