@@ -12,8 +12,8 @@ importers:
         specifier: ^7.26.0
         version: 7.26.0
       '@mybricks/to-code-react':
-        specifier: 0.0.5-next.4
-        version: 0.0.5-next.4
+        specifier: 0.0.5-next.5
+        version: 0.0.5-next.5
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -515,8 +515,8 @@ packages:
   '@microsoft/tsdoc@0.14.2':
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
 
-  '@mybricks/to-code-react@0.0.5-next.4':
-    resolution: {integrity: sha512-cXaOK/RZ2tk3GyKeaXIzOO1LlOwLA23t4ezebFZIH+sHeQIfcx1/1GftnpyvV7zy3c5tuIp9vHDWDHwT3IMyUw==}
+  '@mybricks/to-code-react@0.0.5-next.5':
+    resolution: {integrity: sha512-EysOmMcgWcDRptoQQF7wNUqW2WbpTAU/jOF9GxijtT5mzbXtbFppnKqkTrLxObYiRq1RWGeAAqFzOslVr+ra2A==}
 
   '@napi-rs/nice-android-arm-eabi@1.0.1':
     resolution: {integrity: sha512-5qpvOu5IGwDo7MEKVqqyAxF90I6aLj4n07OzpARdgDRfz8UbBztTByBp0RC59r3J1Ij8uzYi6jI7r5Lws7nn6w==}
@@ -3211,7 +3211,7 @@ snapshots:
 
   '@microsoft/tsdoc@0.14.2': {}
 
-  '@mybricks/to-code-react@0.0.5-next.4':
+  '@mybricks/to-code-react@0.0.5-next.5':
     dependencies:
       '@babel/runtime': 7.26.0
 
