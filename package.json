@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.26.0",
-    "@mybricks/to-code-react": "0.0.5-next.6",
+    "@mybricks/to-code-react": "0.0.5-next.7",
     "prettier": "^3.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
