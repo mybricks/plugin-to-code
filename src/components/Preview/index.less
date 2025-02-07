@@ -1,0 +1,23 @@
+@import url(../../theme.module.less);
+
+.dialog {
+  height: 80vh;
+}
+
+.icon {
+  svg {
+    width: 16px;
+    height: 16px;
+    path {
+      fill: #333;
+    }
+    &:hover {
+      path {
+        fill: var(--mybricks-color-primary, #FA6400);
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1);
+  }
+}

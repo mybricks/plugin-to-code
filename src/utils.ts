@@ -56,23 +56,29 @@ export const getNamespaceToNpmMap = () => {
 }
 
 export const toCode = async (toJSON: any) => {
-  const namespaceToNpmMap: any = getNamespaceToNpmMap();
-  const tsx = toReactCode(toJSON, {
-    namespaceToNpmMap
-  });
+  return new Promise<string>((resolve, reject) => {
+    try {
+      const namespaceToNpmMap: any = getNamespaceToNpmMap();
+      const tsx = toReactCode(toJSON, {
+        namespaceToNpmMap
+      });
 
-  return await prettier.format(`
-    // 当前出码支持：单场景、排版布局、普通插槽、组件事件卡片（不包含fx、变量）
-    // 组件库依赖：react@18 react-dom@18 antd@4 moment@2 @ant-design/icons@4
-    // 请先执行以下命令以安装组件库npm包
-    // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.7
-    ${tsx}`, {
-      parser: 'babel-ts',
-      semi: true,
-      singleQuote: true,
-      tabWidth: 2,
-      plugins: [prettierPluginBabel, prettierPluginEstree]
-    })
+      prettier.format(`
+        // 当前出码支持：单场景、排版布局、普通插槽、组件事件卡片（不包含fx、变量）
+        // 组件库依赖：react@18 react-dom@18 antd@4 moment@2 @ant-design/icons@4
+        // 请先执行以下命令以安装组件库npm包
+        // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.7
+        ${tsx}`, {
+          parser: 'babel-ts',
+          semi: true,
+          singleQuote: true,
+          tabWidth: 2,
+          plugins: [prettierPluginBabel, prettierPluginEstree]
+        }).then(resolve).catch(reject)
+    } catch (e) {
+      reject(e);
+    }
+  });
 }
 
 export function downloadToFile ({ content, name }: { content: any, name: string }) {
