@@ -3,7 +3,7 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import Editor, { Icon, HandlerType } from "@mybricks/coder";
 import context from "../../context";
 import { toCode } from "../../utils";
-import css from "./index.less";
+import css from "../../theme.module.less";
 
 const Preview = () => {
   const containerRef = useRef<HTMLDivElement>(null);

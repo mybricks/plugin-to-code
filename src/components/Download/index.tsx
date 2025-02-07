@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import context from "../../context";
 import { toCode, downloadToFile } from "../../utils";
-import css from "./index.less";
+import css from "../../theme.module.less";
 
 const Download = () => {
   const [error, setError] = useState(false);
