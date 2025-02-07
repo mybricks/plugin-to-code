@@ -64,10 +64,10 @@ export const toCode = async (toJSON: any) => {
       });
 
       prettier.format(`
-        // 当前出码支持：单场景、排版布局、普通插槽、组件事件卡片（不包含fx、变量）
+        // 当前出码未支持能力：模块，插件能力，风格化，AI组件
         // 组件库依赖：react@18 react-dom@18 antd@4 moment@2 @ant-design/icons@4
         // 请先执行以下命令以安装组件库npm包
-        // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.7
+        // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.8
         ${tsx}`, {
           parser: 'babel-ts',
           semi: true,
