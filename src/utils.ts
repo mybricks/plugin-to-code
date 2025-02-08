@@ -70,7 +70,7 @@ export const toCode = async (toJSON: any) => {
         // 当前出码未支持能力：模块，插件能力，风格化，AI组件
         // 组件库依赖：react@18 react-dom@18 antd@4 moment@2 @ant-design/icons@4
         // 请先执行以下命令以安装组件库npm包
-        // npm i @mybricks/comlib-basic@0.0.7-next.4 @mybricks/comlib-pc-normal@0.0.22-next.6 @mybricks/render-react-hoc@0.0.1-next.9
+        // npm i @mybricks/comlib-basic@0.0.7-next.5 @mybricks/comlib-pc-normal@0.0.22-next.7 @mybricks/render-react-hoc@0.0.1-next.9
         ${tsx}`, {
           parser: 'babel-ts',
           semi: true,
