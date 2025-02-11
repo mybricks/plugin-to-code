@@ -11,7 +11,7 @@ const Download = () => {
     try {
       const toJSON = context.plugin.project.toJSON({ withDiagrams: true });
       toCode(toJSON).then((tsx) => {
-        downloadToFile({content: tsx, name: `${context.config.fileName}.tsx`});
+        downloadToFile({content: tsx, name: `${context.config.fileName}.zip`});
         setError(false);
       }).catch((e) => {
         console.error(e);
