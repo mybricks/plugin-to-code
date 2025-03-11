@@ -8,6 +8,7 @@ console.log(`%c ${safeParse(NPM_NAME)} %c@${safeParse(NPM_VERSION)}`, `color:#FF
 
 export default function pluginEntry(config?: any) {
   const fileName = config?.fileContent?.name || config?.fileName || "MyBricksCode";
+  const type = config?.type || "spa";
 
   return {
     name: '@mybricks/plugins/tocode',
@@ -25,6 +26,7 @@ export default function pluginEntry(config?: any) {
               context.plugin = plugin;
               context.config = {
                 fileName,
+                type,
               };
             }
             return React.createElement(Render, null);

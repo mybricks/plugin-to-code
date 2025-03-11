@@ -2,7 +2,8 @@ import JSzip from "jszip";
 import prettier from "prettier";
 import prettierPluginBabel from "prettier/plugins/babel";
 import prettierPluginEstree from "prettier/plugins/estree";
-import { toCode as toReactCode } from "@mybricks/to-code-react";
+import { toCode as toReactCode, toMpaCode as toReactMpaCode } from "@mybricks/to-code-react";
+import context from "./context";
 
 /** 首字母转换为大写 */
 export const capitalizeFirstLetter = (str: string) => {
@@ -63,10 +64,10 @@ export const toCode = async (toJSON: any) => {
   return new Promise<{path: string, content: string}[]>((resolve, reject) => {
     try {
       const namespaceToMetaDataMap: any = getNamespaceToMetaDataMap();
-      const tsx = toReactCode(toJSON, {
+      const tsx = (context.config.type === "mpa" ? toReactMpaCode : toReactCode)(toJSON, {
         namespaceToMetaDataMap,
         splitModules: true
-      });
+      }) ;
 
       Promise.all((tsx as {path: string, content: string}[]).map(({ path, content }) => {
         return new Promise<{path: string, content: string }>((resolve, reject) => {

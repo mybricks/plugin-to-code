@@ -15,8 +15,8 @@ importers:
         specifier: ^0.0.87
         version: 0.0.87(@types/react@18.3.18)(monaco-editor@0.52.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mybricks/to-code-react':
-        specifier: 0.0.5-next.16
-        version: 0.0.5-next.16
+        specifier: 0.0.5-next.17
+        version: 0.0.5-next.17
       jszip:
         specifier: ^3.10.1
         version: 3.10.1
@@ -552,8 +552,8 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
 
-  '@mybricks/to-code-react@0.0.5-next.16':
-    resolution: {integrity: sha512-pcZBzQtMwRhnXQh/6zOzudaZhPTVWr1tPiC+RB/Ns/pge8+6HnwQ+pF+kDDINwKRS8SjxDE+XozZ7w5x0Cy0Og==}
+  '@mybricks/to-code-react@0.0.5-next.17':
+    resolution: {integrity: sha512-FoiRJ2I5JmUlf/ZbqiYMyO7KcVyeJ25sI0zcrlYa2eRnV4oNx8HBUr+IK4RwvxYM3HUuBDmpZnZzxFhTMSkLoA==}
 
   '@napi-rs/nice-android-arm-eabi@1.0.1':
     resolution: {integrity: sha512-5qpvOu5IGwDo7MEKVqqyAxF90I6aLj4n07OzpARdgDRfz8UbBztTByBp0RC59r3J1Ij8uzYi6jI7r5Lws7nn6w==}
@@ -3623,7 +3623,7 @@ snapshots:
       - monaco-editor
       - supports-color
 
-  '@mybricks/to-code-react@0.0.5-next.16':
+  '@mybricks/to-code-react@0.0.5-next.17':
     dependencies:
       '@babel/runtime': 7.26.0
 
