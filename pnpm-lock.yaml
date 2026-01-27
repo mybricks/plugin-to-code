@@ -15,8 +15,8 @@ importers:
         specifier: ^0.0.87
         version: 0.0.87(@types/react@18.3.26)(monaco-editor@0.54.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mybricks/to-code-react':
-        specifier: 0.0.5-next.143
-        version: 0.0.5-next.143
+        specifier: 0.0.5-next.163
+        version: 0.0.5-next.163
       jszip:
         specifier: ^3.10.1
         version: 3.10.1
@@ -556,8 +556,8 @@ packages:
       react: ^17.0.2
       react-dom: ^17.0.2
 
-  '@mybricks/to-code-react@0.0.5-next.143':
-    resolution: {integrity: sha512-3zqqsWDAwALKWbD81u2ZOf9Wf9Sg9Q1b7hhMI5O/0xr4E++L+T4dDbrDMuwcJwMiZV9uiTGct+8LfOxPC+wJQg==}
+  '@mybricks/to-code-react@0.0.5-next.163':
+    resolution: {integrity: sha512-Cx0oDOfgRJA/X/cr1YrtNfpXkDe+/N0WWY/lRPZ0Z8lQJawyajzZBQL4rQwAQ3yMbUbm1YK66KdlfNwIVQ5vUQ==}
 
   '@napi-rs/nice-android-arm-eabi@1.1.1':
     resolution: {integrity: sha512-kjirL3N6TnRPv5iuHw36wnucNqXAO46dzK9oPb0wj076R5Xm8PfUVA9nAFB5ZNMmfJQJVKACAPd/Z2KYMppthw==}
@@ -2848,6 +2848,11 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
+  prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+
   prettier@3.6.2:
     resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
@@ -3985,9 +3990,10 @@ snapshots:
       - monaco-editor
       - supports-color
 
-  '@mybricks/to-code-react@0.0.5-next.143':
+  '@mybricks/to-code-react@0.0.5-next.163':
     dependencies:
       '@babel/runtime': 7.28.4
+      prettier: 2.8.8
 
   '@napi-rs/nice-android-arm-eabi@1.1.1':
     optional: true
@@ -6782,6 +6788,8 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  prettier@2.8.8: {}
 
   prettier@3.6.2: {}
 

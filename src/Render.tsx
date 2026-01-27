@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Download, Preview } from "./components";
+import { Download, Preview, ToReact } from "./components";
 import css from "./Render.module.less";
 
 const Render = () => {
@@ -15,6 +15,7 @@ const Render = () => {
           <div className={css.itemContent}>
             <Download />
             <Preview />
+            <ToReact />
           </div>
         </div>
       </div>
