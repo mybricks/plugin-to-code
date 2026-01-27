@@ -13,9 +13,9 @@ const Render = () => {
             源码（Beta）
           </div>
           <div className={css.itemContent}>
+            <ToReact />
             <Download />
             <Preview />
-            <ToReact />
           </div>
         </div>
       </div>
